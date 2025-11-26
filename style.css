@@ -1,0 +1,121 @@
+/* ======== Fade Slide Up ======== */
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s cubic-bezier(.18,.89,.32,1.28);
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ======== POP Effect ======== */
+.animate-pop {
+  animation: pop 0.5s ease-out;
+}
+@keyframes pop {
+  0%   { transform: scale(0.6); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ======== Card Styling ======== */
+.card-container {
+  perspective: 1200px;
+}
+.card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+}
+
+/* ======== Neon Border Animation ======== */
+.neon-border {
+  position: relative;
+}
+.neon-border::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 22px;
+  background: linear-gradient(45deg,#5b21b6,#6366f1,#3b82f6,#8b5cf6);
+  z-index: -1;
+  filter: blur(20px);
+  animation: borderGlow 3s infinite linear;
+}
+@keyframes borderGlow {
+  0% { filter: blur(20px) brightness(0.7); }
+  50% { filter: blur(25px) brightness(1.2); }
+  100% { filter: blur(20px) brightness(0.7); }
+}
+
+/* ======== Neon Text ======== */
+.neon-text {
+  text-shadow: 0 0 12px #818cf8, 0 0 24px #6366f1;
+}
+
+/* ======== Input Glass ======== */
+.input-glass {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+.input-glass:focus {
+  box-shadow: 0 0 12px #6366f1;
+  border-color: #6366f1;
+}
+
+/* ======== Buttons ======== */
+.btn-glow {
+  background: linear-gradient(90deg,#4f46e5,#7c3aed);
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: .2s;
+}
+.btn-glow:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 15px #7c3aed;
+}
+
+.btn-green {
+  background: linear-gradient(90deg,#16a34a,#22c55e);
+  padding: 12px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+.btn-dark {
+  background: rgba(255,255,255,0.12);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+/* ======== History Box ======== */
+.history-box {
+  background: rgba(0,0,0,0.25);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ======== Error Shake ======== */
+.shake {
+  animation: shake 0.25s linear;
+}
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
