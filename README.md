@@ -86,7 +86,7 @@ Das Ziel dieses Projekts ist das Üben von JavaScript-Spiel-Logik, DOM-Manipulat
 
 ## 👨‍💻 Entwickler
 
-Projekt erstellt von: herrksissoumarouane-glitch
+Projekt erstellt von: Marouane 
 
 ```
 ```
